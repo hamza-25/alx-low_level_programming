@@ -6,11 +6,6 @@
 */
 int main(void)
 {
-char a;
-int b;
-long int c;
-long long int d;
-float f;
 printf("Size of a char: %u bytes(s)\n", sizeof(char));
 printf("Size of an int: %u bytes(s)\n", sizeof(int));
 printf("Size of a long int: %u byte(s)\n", sizeof(long int));
