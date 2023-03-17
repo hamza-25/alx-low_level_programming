@@ -1,9 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-/* main - Entry point */
-/* description: negative and positive program */
-/* Return: always 0*/
+
+/**
+* main - Entry point
+* Description: A C program that prints with printf function
+* Return: Always 0 (Success)
+*/
 
 /* betty style doc for function main goes there */
 int main(void)
