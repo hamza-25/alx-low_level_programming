@@ -22,14 +22,14 @@ putchar(digit_1 + 48);
 putchar(digit_2 + 48);
 if (digit_1 + digit_2 != 17)
 {
-putchar(",");
-putchar(" ");
+putchar(',');
+putchar(' ');
 }
 }
 digit_2++;
 }
 digit_1++;
 }
-putchar("\n");
+putchar('\n');
 return (0);
 }
