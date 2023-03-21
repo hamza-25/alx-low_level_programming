@@ -5,14 +5,16 @@
 /**
  * print_sign - function to check if character is lowercase
  *
- * _abs(): takes integer type input for function
+ * @n: takes integer type input for function
  *
  * Return: 1 if +, 0 if 0 and -1 if -
 */
 
-int _abs(int a)
+int _abs(int n)
 {
-b = abs(a);
-_putchar(b);
-_putchar('\n');
+if (n < 0)
+{
+n = (-1) * n;
+}
+return (n);
 }
