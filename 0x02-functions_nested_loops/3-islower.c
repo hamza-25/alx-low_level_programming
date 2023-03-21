@@ -2,15 +2,11 @@
 #include <ctype.h>
 
 /**
- * Description: _islower utilizes on the _putchar function to print
+ * _islower - function to check if character is lowercase
  *
- * C - check is lower
+ * @c: checks input of function
  *
- * main - check the code.
- *
- * int _islower(int c)
- *
- * Return: Always 0.
+ * Return: returns 1 if 'c' is lowercase otherwise always 0 (Success)
 */
 
 int _islower(int c)
