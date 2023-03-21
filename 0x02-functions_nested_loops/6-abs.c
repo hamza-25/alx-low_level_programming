@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * print_sign - function to check if character is lowercase
+ * Return: always 0
  *
  * @n: takes integer type input for function
  *
- * _abs: absolute value
+ * _abs - absolute value
 */
 
 int _abs(int n)
