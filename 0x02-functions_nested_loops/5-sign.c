@@ -4,9 +4,9 @@
 /**
  * print_sign - function to check if character is lowercase
  *
- * @c: checks input of function
+ * @n: takes integer type input for function
  *
- * Return: returns 1 if 'c' is lowercase otherwise always 0 (Success)
+ * Return: 1 if +, 0 if 0 and -1 if -
 */
 
 int print_sign(int n)
