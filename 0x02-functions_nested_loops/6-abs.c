@@ -7,7 +7,7 @@
  *
  * @n: takes integer type input for function
  *
- * Return: 1 if +, 0 if 0 and -1 if -
+ * _abs: absolute value
 */
 
 int _abs(int n)
