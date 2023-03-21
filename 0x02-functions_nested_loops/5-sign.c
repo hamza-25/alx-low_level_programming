@@ -9,29 +9,22 @@
  * Return: returns 1 if 'c' is lowercase otherwise always 0 (Success)
 */
 
-int print_sign(int c)
+int print_sign(int n)
 {
-if (c > 0)
+if (n > 0)
 {
 _putchar(43);
-_putchar(44);
-_putchar(' ');
-_putchar(49);
+return (1);
 }
-else if (c < 0)
+else if (n < 0)
 {
 _putchar(45);
-_putchar(44);
-_putchar(' ');
-_putchar(44);
-_putchar(49);
+return (-1);
 }
 else
 {
 _putchar(48);
-_putchar(44);
-_putchar(' ');
-_putchar(48);
+return(0);
 }
 _putchar('\n');
 }
