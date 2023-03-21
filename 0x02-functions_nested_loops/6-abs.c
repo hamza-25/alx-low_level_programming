@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * Return: always 0
+ * _abs - absolute value
  *
  * @n: takes integer type input for function
  *
- * _abs - absolute value
+ * Return: always 0
 */
 
 int _abs(int n)
