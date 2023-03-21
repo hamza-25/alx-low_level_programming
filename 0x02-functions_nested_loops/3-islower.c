@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 /**
- * _islower - utilizes on the _putchar function to print
+ * Description: _islower utilizes on the _putchar function to print
  *
  * C - check is lower
  *
