@@ -17,7 +17,7 @@ if (n < 0)
 {
 last_digit = (-1) * (n % 10);
 }
-else 
+else
 {
 last_digit = n % 10;
 }
