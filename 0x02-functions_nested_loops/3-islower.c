@@ -3,7 +3,12 @@
 
 /**
  * _islower - utilizes on the _putchar function to print
+ *
  * C - check is lower
+ *
+ * main - check the code.
+ *
+ * Return: Always 0.
 */
 
 int _islower(int c)
