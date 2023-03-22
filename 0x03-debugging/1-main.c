@@ -16,7 +16,6 @@ i = 0;
 while (i < 1)
 {
 putchar(i);
-i++;
 }
 
 printf("Infinite loop avoided! \\o/\n");
