@@ -16,7 +16,7 @@ for (j = 0; j <= 9; j++)
 mult = j * i;
 if (mult <= 9)
 {
-printf("%d", mult);
+printf ("%d", mult);
 if (j != 9)
 {
 pre = i * (j + 1);
