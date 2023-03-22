@@ -22,24 +22,23 @@ if (j != 9)
 pre = i * (j + 1);
 if (pre <= 9)
 {
-printf(",  ");
+printf (",  ");
 }
 else
 {
-printf(", ");
-}             
+printf (", ");
+}
 }
 }
 else
 {
-printf("%d", mult);
-if(j != 9)
+printf ("%d", mult);
+if (j != 9)
 {
-printf(", ");
+printf (", ");
 }
 }
-            
 }
-printf("\n");
+printf ("\n");
 }
 }
