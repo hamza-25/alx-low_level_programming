@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_diagonal - printing a line diagonal
+ * print_triangle - printing a line diagonal
  * @size: number of diagonal
 */
 
-void print_diagonal(int size)
+void print_triangle(int size)
 {
 	int i, j;
 
