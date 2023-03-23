@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * print_triangle - printing a line diagonal
- * @size: number of diagonal
- * Return: Always 0 (Success)
-*/
+ * print_triangle - print a triangle
+ * code by Prince Solomon
+ * @size: size of the triangle
+ * Return: void
+ */
 
 void print_triangle(int size)
 {
-	int hght, base;
+	int row, hashes, spaces;
 
 	if (size <= 0)
 	{
@@ -16,20 +17,17 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (hght = 1 ; hght <= size; hght++)
-	{
-		for (base = 1; base <= size; base++)
+		for (row = 1; row <= size; row++)
 		{
-			if ((hght + base) <= size)
+			for (spaces = size - row; spaces >= 1; spaces--)
 			{
 				_putchar(' ');
 			}
-			else
+			for (hashes = 1; hashes <= row; hashes++)
 			{
-				putchar('#');
+				_putchar('#');
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
-	}
 	}
 }
