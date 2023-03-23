@@ -7,15 +7,17 @@
 
 void print_triangle(int size)
 {
-	int i, j;
+	int hght, base;
 
-	if (size > 0)
+	if (size <= 0)
+		_putchar('\n');
+	else
 	{
-	for (i = 1 ; i <= size; i++)
+	for (hght = 1 ; hght <= size; hght++)
 	{
-		for (j = 1; j <= size; j++)
+		for (base = 1; base <= size; base++)
 		{
-			if ((i + j) >= size)
+			if ((hght + base) <= size)
 			{
 				_putchar(' ');
 			}
@@ -26,9 +28,5 @@ void print_triangle(int size)
 		}
 		_putchar('\n');
 	}
-	}
-	else
-	{
-		_putchar('\n');
 	}
 }
