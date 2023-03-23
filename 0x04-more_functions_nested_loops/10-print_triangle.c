@@ -17,11 +17,11 @@ void print_diagonal(int size)
 		{
 			if ((i + j) >= size)
 			{
-				_putchar(92);
+				_putchar(' ');
 			}
 			else
 			{
-				putchar(' ');
+				putchar('#');
 			}
 		}
 		_putchar('\n');
