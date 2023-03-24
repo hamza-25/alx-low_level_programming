@@ -11,10 +11,9 @@ void print_number(int num)
   
     tostring(str, num);
     countStr = str_length(str);
-    // printf("%d\n", countStr);
     for (i = 0; i < countStr; i++)
     {
-        printf("%c", str[i]);
+        _putchar(str[i]);
     }
 }
  
