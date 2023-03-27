@@ -1,25 +1,14 @@
 #include "main.h"
 
 /**
- * reset_to_98:  reset number
+ * reset_to_98 - function that reset number
  * description: number 98 greather or less reset to it
- * @n: pointer number to reset
+ * @n: input
+ * update value n to 98
+ * Return: n
 */
 
 void reset_to_98(int *n)
 {
-	int diff;
-
-	if (*n >= 98)
-	{
-		diff = *n - 98;
-		*n = *n - diff;
-	}
-	else
-	{
-		diff = 98 - *n;
-		*n = *n + diff;
-	}
-	_putchar('\n');
-	return (*n);
+	*n = 98;
 }
