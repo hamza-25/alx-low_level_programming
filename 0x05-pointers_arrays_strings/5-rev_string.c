@@ -22,7 +22,7 @@ void print_rev(char *s)
 	s--;
 	for (i = strlen; i > 0; i--)
 	{
-		rev_str[count] = *s;
+		rev_str[count] = s;
 		count++;
 		s--;
 	}
