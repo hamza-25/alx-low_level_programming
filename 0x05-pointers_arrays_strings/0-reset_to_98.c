@@ -20,5 +20,6 @@ void reset_to_98(int *n)
 		diff = 98 - *n;
 		*n = *n + diff;
 	}
+	_putchar('\n');
 	return (*n);
 }
