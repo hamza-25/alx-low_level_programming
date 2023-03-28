@@ -1,20 +1,41 @@
 #include "main.h"
 
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+		
+			
+	
 /**
- * puts_2 - function that print
- * description: string printing rev
- * @str: string to print
- * Return: always 0
-*/
+ * puts2 - prints every other character of a string
+ *
+ * @str: char to check
+ *
+ * Return: 0 is (success)
+ */
 
-void puts_2(char *str)
+void puts2(char *str)
 {
-	int i;
+	int s;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (s = 0; str[s] != '\0'; s++)
 	{
-		if (o % 2 == 0)
-			_putchar(str[i]);
+	if (s % 2 == 0)
+	{
+		_putchar(str[s]);
+	}
 	}
 	_putchar('\n');
 }
+	
+
