@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 		if (*s == c)
 		{
 			printf("%c", *s);
-			return (s);
+			return (*s);
 		}
 		s++;
 	}
