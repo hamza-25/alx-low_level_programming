@@ -6,18 +6,15 @@
  * Return: void
 */
 void print_diagsums(int *a, int size)
-{
-	int k, e, o, h = 0, g = 0;
-
-	for (k = 0; k < size; k++)
 	{
-		o = (k * size) + k;
-		h += *(a + o);
-	}
-	for (e = 0; e < size; e++)
+	int i;
+	int sum2, sum1 = 0; 
+	for (i = 0; i < size; i++)
 	{
-		o = (e * size) + (size - 1 - e);
-		g += *(a + o);
-	}
-	printf("%i, %i\n", h, g);
+	sum1 += a[i];
+	sum2 += a[size - 1 - i];
+	a += size;
+}
+	printf("%d\n", sum1);
+	printf("%d\n", sum2);
 }
