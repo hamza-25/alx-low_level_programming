@@ -7,16 +7,17 @@
  * Return: byte
  */
 char *_strpbrk(char *s, char *accept)
-{
-	int j;
-		while (*s)
-		{
-			for (j = 0; accept[j]; j++)
-			{
-				if (*s == accept[j])
-					return (s);
-			}
-			s++;
-		}
-	return (NULL);
-}
+  {
+      int i, j;
+       for (i = 0; accept[i] != '\0'; i++)
+       {
+           for (j = 0; s[j] != '\0'; j++)
+            {
+                if (accept[i] == s[j])
+                {
+                    return s[j];
+                }
+            }
+       }
+       return  NULL;
+  }
