@@ -9,8 +9,7 @@
 char *_strpbrk(char *s, char *accept)
   {
    int i, j;
-      char* head = s;
-      char* k;
+
       i = 0;
        while (s[i] != '\0')
        {
@@ -19,12 +18,11 @@ char *_strpbrk(char *s, char *accept)
             {
                 if (s[i] == accept[j])
                 {
-                    k = &s[i];
-                    return (k);
+                    return (s + i);
                 }
                 j++;
             }
           i++;
        }
-       return  (0);
+       return  (NULL);
   }
