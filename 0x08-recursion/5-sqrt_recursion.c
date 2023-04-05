@@ -1,24 +1,28 @@
 #include "main.h"
 
 /**
- * _pow_recursion - function that count power of number
- * @x: number
- * @y: power number
- * Return: -1 if n lower than 0
-*/
+ * verify - check for the square root
+ * @x:first int
+ * @y:second int
+ * Return: integer
+ */
+int verify(int x, int y)
+{
+	if (x * x == y)
+		return (x);
+	if (x * x > y)
+		return (-1);
+	return (verify(x + 1, y));
+}
 
-int _pow_recursion(int x, int y)
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: int to find sqrt
+ * Return: return -1 or natural square
+ */
+int _sqrt_recursion(int n)
 {
-if (y < 0)
-{
-	return (-1);
-}
-else if (y != 0)
-{
-	return (x * _pow_recursion(x, y - 1));
-}
-else
-{
-	return (1);
-}
+	if (n == 0)
+		return (0);
+	return (verify(1, n));
 }
