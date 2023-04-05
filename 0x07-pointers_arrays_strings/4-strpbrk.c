@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _strpbrk - function that searches a string 
- * @s: first occurrence 
- * @accept: matches one of the bytes, or @NULL 
- * Return: byte
- */
+* _strpbrk - function that searches a string 
+* @s: first occurrence 
+* @accept: matches one of the bytes, or @NULL 
+* Return: byte
+*/
 char *_strpbrk(char *s, char *accept)
-  {
+{
 int k;
 
 while (*s)
