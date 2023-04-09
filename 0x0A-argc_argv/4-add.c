@@ -8,7 +8,7 @@
  * main - entry point
  * @argc: count argc
  * @argv: string of array from args
- * descriptio: argc and argv function
+ * descriptio: argc and argv function sum args
  * Return: Always return 0
 */
 int main(int argc, char *argv[])
