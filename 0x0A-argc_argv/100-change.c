@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int i, back = 0, mny = atoi(argv[1]);
 	int cents[] = {25, 10, 5, 2, 1};
 
-	if(mny < 0)
+	if (mny < 0)
 	{
 		printf("%d\n", 0);
 	}
@@ -24,9 +24,9 @@ int main(int argc, char *argv[])
 	{
 	if (argc < 3 && argc > 1)
 	{
-		for(i = 0; i < 5; i++)
+		for (i = 0; i < 5; i++)
 		{
-			if(mny >= cents[i])
+			if (mny >= cents[i])
 			{
 				back += mny / cents[i];
 				mny = mny % cents[i];
