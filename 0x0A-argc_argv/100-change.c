@@ -16,13 +16,13 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("Error\n");
-                return (1);
+		return (1);
 	}
 	else
 	{
 	int i, back = 0, mny = atoi(argv[1]);
 	int coins[] = {25, 10, 5, 2, 1};
-	
+
 	if (mny < 0)
 	{
 		printf("%d\n", 0);
