@@ -10,7 +10,7 @@
  * Return: NULL value or pointer to the array initialized
 */
 
-char char *str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
 	int size, i, len1 = 0, len2 = 0;
