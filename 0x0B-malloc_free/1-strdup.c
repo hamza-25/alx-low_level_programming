@@ -16,10 +16,10 @@ char *_strdup(char *str)
 
 	for (; str[len] != '\0'; len++)
 		;
-	if (len == 0)
-		return (0);
-	ptr = malloc(len * sizeof(str));
-	if (ptr == NULL)
+	if (str == NULL)
+		return (NULL);
+	ptr = malloc(len * sizeof(*str) + 1);
+	if (ptr == 0)
 	{
 		return (NULL);
 	}
