@@ -17,6 +17,6 @@ char *create_array(unsigned int size, char c)
 	if (mem == 0)
 		return(0);
 	while (size--)
-		n[size] = c;
+		mem[size] = c;
 	return (mem);
 }
