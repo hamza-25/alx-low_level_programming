@@ -10,7 +10,7 @@
  * Return: NULL value or pointer to the array initialized
 */
 
-void *argstostr(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 int i, j, k = 0,len = 0;
   char *ptr;
