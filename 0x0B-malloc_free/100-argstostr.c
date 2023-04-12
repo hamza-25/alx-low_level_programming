@@ -12,9 +12,9 @@
 
 char *argstostr(int ac, char **av)
 {
-int i, j, k = 0,len = 0;
-char *ptr; 
-if(ac == 0 || av == NULL)
+int i, j, k = 0, len = 0;
+char *ptr;
+if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
@@ -27,7 +27,7 @@ len++;
 len++;
 }
 len++;
-ptr = (char*)malloc(sizeof(char) * len);
+ptr = (char *)malloc(sizeof(char) * len);
 if (ptr == NULL)
 {
 return (NULL);
@@ -45,5 +45,5 @@ k++;
 }
 ptr[k] = '\0';
 return (ptr);
-}	
+}
 }
