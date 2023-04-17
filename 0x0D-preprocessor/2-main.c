@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
- * main - entry point 
- * description: print name of the file 
+ * main - entry point
+ * description: print name of the file
  * Return: always 0
 */
-int main()
+int main(void)
 {
 	printf("%s", __FILE__);
 	return (0);
