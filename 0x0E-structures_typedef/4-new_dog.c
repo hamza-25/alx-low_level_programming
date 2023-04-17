@@ -3,7 +3,7 @@
 #include "dog.h"
 
 /**
- * *new_dog - printing the dog
+ * new_dog - printing the dog
  * @name: new name
  * @age: new age
  * @owner: new owner
@@ -17,7 +17,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int lname, i, lowner;
 
 	c_dog = malloc(sizeof(*c_dog));
-	if (c_dog == NULL || !(lowner) || !(name))
+	if (c_dog == NULL || !(owner) || !(name))
 	{
 		free(c_dog);
 		return (NULL);
@@ -25,11 +25,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (lname = 0; name[lname]; lname++)
 		;
 
-	for (lowner = 0; name[lowner]; lowner++)
+	for (lowner = 0; owner[lowner]; lowner++)
 		;
 	c_dog->name = malloc(lname + 1);
 	c_dog->owner = malloc(lowner + 1);
-	if (!(c_dog->name) || !(c_dog->lowner))
+	if (!(c_dog->name) || !(c_dog->owner))
 	{
 		free(c_dog->name);
 		free(c_dog->owner);
