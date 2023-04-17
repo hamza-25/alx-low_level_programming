@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "dog.h"
+
 /**
  * init_dog - init the dog
  * @name: name of dog
