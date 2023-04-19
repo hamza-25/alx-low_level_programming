@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "_FUNCTION_POINTERS_H"
+#include "function_pointers.h"
 
 /**
  * print_name - func that's accept two arg
@@ -7,6 +7,11 @@
  * @f: func pointers
  * return: nothing
 */
+
+void print_name_as_is(char *name)
+{
+    printf("Hello, my name is %s\n", name);
+}
 void print_name(char *name, void (*f)(char *))
 {
 	f(name);
