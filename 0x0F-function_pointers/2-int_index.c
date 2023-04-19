@@ -6,7 +6,7 @@
  * @array: array
  * @cmp: func to compair
  * @size: lenght
- * Return: return (1) if found
+ * Return: return (1) index integer
 */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -21,6 +21,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 				return (i);
 			i++;
 		}
-		return (-1);
 	}
+	return (-1);
 }
