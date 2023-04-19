@@ -4,12 +4,12 @@
  * op_add - functions that do operation
  * @a: first int
  * @b: second in
- * Return: int sum 
+ * Return: int sum
 */
 
 int op_add(int a, int b)
 {
-	return (a + b); 
+	return (a + b);
 }
 
 /**
