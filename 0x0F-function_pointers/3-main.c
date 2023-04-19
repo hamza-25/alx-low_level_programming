@@ -1,9 +1,9 @@
 #include "3-calc.h"
 
 /**
- * main - check code 
+ * main - check code
  * @argc: num of args
- * @argv: array of args 
+ * @argv: array of args
  * Return: 0
 */
 
