@@ -11,7 +11,6 @@
 		unsigned int i = 0, j, l = 0;
 		char *r;
 		const char r_format[] = "csif";
-	
 
 		va_start(ptr, format);
 		while (format && format[i])
