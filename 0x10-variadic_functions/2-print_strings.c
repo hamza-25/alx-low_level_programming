@@ -16,6 +16,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *r;
 
 	va_start(ptr, n);
+	if (!n)
+	{
+		printf("\n");
+		return;
+	}
 	for (i = 0; i < n; i++)
 	{
 		r = va_arg(ptr, char *);
