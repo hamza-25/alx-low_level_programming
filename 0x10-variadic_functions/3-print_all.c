@@ -4,7 +4,6 @@
  * print_all - print all inputs
  * @format: forma to be printed
  * Return: void
- *
 */
 void print_all(const char * const format, ...)
 {
