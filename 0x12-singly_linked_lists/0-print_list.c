@@ -35,7 +35,7 @@ size_t print_list(const list_t *h)
 		if (h->str == NULL)
 			printf("[%d] (nil)\n", string_len(h->str));
 		else
-			printf("[%d] %s\n", string_len(h->len), h->str);
+			printf("[%d] %s\n", string_len(h->str), h->str);
 		h = h->next;
 	}
 	return (i);
