@@ -19,7 +19,7 @@ unsigned int len_str(const char *s)
 }
 
 /**
- * list_t *add_node - function that add node in front of list 
+ * list_t *add_node - function that add node in front of list
  * @str: name of node
  * @head: first node
  * Return: return addrres of element or null if faild
@@ -28,12 +28,13 @@ unsigned int len_str(const char *s)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
+	
 	new = malloc(sizeof(list_t));
 	if (!head || !new)
 		return (NULL);
 	if (str)
 	{
-		new->str = strdup(str);
+		new->str = strdup (str);
 		if(!new->str)
 		{
 			free(new);
