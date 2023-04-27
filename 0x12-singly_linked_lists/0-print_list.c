@@ -1,10 +1,11 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
  * string_len - to count str
  * @s: str to be counted
  * Return: len of str
-*/
+
 
 int string_len(char *s)
 {
@@ -16,7 +17,7 @@ int string_len(char *s)
 		i++;
 	return (i);
 }
-
+*/
 /**
  * print_list - function that print content of nodes
  * @h: first node
@@ -30,9 +31,9 @@ size_t print_list(const list_t *h)
 	while (h != NULL)
 	{
 		if (h->str == NULL)
-			printf("[%d] %s\n", string_len(h->str), "(nil)");
+			printf("[%d] %s\n", 0, "(nil)");
 		else
-			printf("[%d] %s\n", string_len(h->str), h->str);
+			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
 		i++;
 	}
