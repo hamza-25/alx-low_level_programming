@@ -27,7 +27,8 @@ unsigned int len_str(const char *s)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *current;
+	list_t *new;
+	list_t *current = *head;
 
 	new = malloc(sizeof(list_t));
 	if (!new)
@@ -37,15 +38,13 @@ list_t *add_node_end(list_t **head, const char *str)
 		new->str = strdup(str);
 		new->len = len_str(new->str);
 	}
-	new->next = NULL;
-	current = *head;
 	if (current == NULL)
 	{
 		*head = new;
 	}
 	else
 	{
-		while (current != NULL)
+		while (current->next)
 			current = current->next;
 		current->next = new;
 	}
