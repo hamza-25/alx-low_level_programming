@@ -28,14 +28,14 @@ unsigned int len_str(const char *s)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	
+
 	new = malloc(sizeof(list_t));
 	if (!head || !new)
 		return (NULL);
 	if (str)
 	{
-		new->str = strdup (str);
-		if(!new->str)
+		new->str = strdup(str);
+		if (!new->str)
 		{
 			free(new);
 			return (NULL);
@@ -44,5 +44,5 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	new->next = *head;
 	*head = new;
-	return (new);	
+	return (new);
 }
