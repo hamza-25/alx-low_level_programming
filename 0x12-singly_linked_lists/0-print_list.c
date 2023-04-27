@@ -27,16 +27,13 @@ int string_len(char *s)
 
 size_t print_list(const list_t *h)
 {
-	unsigned int i = 0;
+	size_t i = 0;
 
 	while (h != NULL)
 	{
-		i += 1;
-		if (h->str == NULL)
-			printf("[%d] (nil)\n", string_len(h->str));
-		else
-			printf("[%d] %s\n", string_len(h->str), h->str);
+		printf("[%d] %s\n", string_len(h->str), h->str ? h->str : "(nil)");
 		h = h->next;
+		i++;
 	}
 	return (i);
 
