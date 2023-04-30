@@ -24,10 +24,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (idx >= count)
 		return (NULL);
 	while (act && i < idx - 1)
-        {
-                act = act->next;
+	{
+		act = act->next;
 		i++;
-        }
+	}
 	new->next = act->next;
 	act->next = new;
 	return (new);
