@@ -13,13 +13,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *act = *head;
 	unsigned int count = 0, i = 1;
 
-	if (head == NULL || !new)
+	if (head == NULL || new == NULL)
 		return (NULL);
 	if (idx == 0)
 	{
 		new->n = n;
 		new->next = current;
-		*head = new;
+		(*head) = new;
 		return (new);
 	}
 	while (current)
