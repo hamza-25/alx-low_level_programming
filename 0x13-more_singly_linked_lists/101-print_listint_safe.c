@@ -26,12 +26,12 @@ size_t print_listint_safe(const listint_t *head)
 	if (slow != fast)
 		goto pr;
 	slow = head;
-		while (slow != fast)
+	while (slow != fast)
 	{
 	slow = slow->next;
 	fast = fast->next;
 	}
-		pr:
+pr:
 	for (; head; num_of_elem++)
 		{
 		if (slow == head)
@@ -49,7 +49,7 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	else
 	{
-		exit (98);
+		exit(98);
 	}
 	return (num_of_elem);
 }
