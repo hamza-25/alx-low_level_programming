@@ -46,7 +46,5 @@ pr:
 		head = head->next;
 		}
 	}
-	else
-		exit(98);
 	return (num_of_elem);
 }
