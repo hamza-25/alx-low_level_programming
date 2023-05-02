@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_listint_safe - func to print list safe
- * @h: the head of the list
+ * @head: the head of the list
  * Return:  number of elements nodes
 */
 size_t print_listint_safe(const listint_t *head)
