@@ -7,7 +7,7 @@
 */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t num_of_elem = 0;
+	size_t num_of_elem = 0, tour = 0;
 
 	if (head)
 	{
@@ -32,10 +32,19 @@ size_t print_listint_safe(const listint_t *head)
 	fast = fast->next;
 	}
 		pr:
-		for (; !head; num_of_elem++)
+	for (; head; num_of_elem++)
 		{
-			printf("[%p] %d\n", (void *)&(head), head->n);
-			head = head->next;
+		if (slow == head)
+		{
+		if (tour == 1)
+		{
+			printf("-> [%p] %d\n", (void *)&(head), head->n);
+			return (num_of_elem);
+		}
+		tour++;
+		}
+		printf("[%p] %d\n", (void *)&(head), head->n);
+		head = head->next;
 		}
 	}
 	else
