@@ -8,12 +8,11 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t num_of_elem = 0, tour = 0;
-
-	if (head)
-	{
 	const listint_t *slow = head;
 	const listint_t *fast = head;
 
+	if (head)
+	{
 	slow = slow->next;
 	fast = fast->next->next;
 	while (fast && fast->next)
@@ -48,8 +47,6 @@ pr:
 		}
 	}
 	else
-	{
 		exit(98);
-	}
 	return (num_of_elem);
 }
