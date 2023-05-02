@@ -11,6 +11,27 @@ size_t print_listint_safe(const listint_t *head)
 
 	if (head)
 	{
+	const listint_t *slow = head;
+	const listint_t *fast = head;
+
+	slow = slow->next;
+	fast = fast->next->next;
+	while (fast && fast->next)
+	{
+	if (slow == fast)
+		break;
+	slow = slow->next;
+	fast = fast->next->next;
+	}
+	if (slow != fast)
+		goto pr;
+	slow = head;
+		while (slow != fast)
+	{
+	slow = slow->next;
+	fast = fast->next;
+	}
+		pr:
 		for (; !head; num_of_elem++)
 		{
 			printf("[%p] %d\n", (void *)&(head), head->n);
