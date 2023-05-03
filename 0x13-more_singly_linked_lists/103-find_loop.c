@@ -41,6 +41,4 @@ listint_t *find_listint_loop(listint_t *head)
 
     p = detect_loop(p);
     return (p);
-    if (!p)
-        return (NULL);
 }
