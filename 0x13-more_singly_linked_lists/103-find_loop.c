@@ -39,6 +39,8 @@ listint_t *find_listint_loop(listint_t *head)
 {
     listint_t *p = head;
 
-    p = detect_loop(head);
+    p = detect_loop(p);
     return (p);
+    if (!p)
+        return (NULL);
 }
