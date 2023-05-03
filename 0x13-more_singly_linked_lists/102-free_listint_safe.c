@@ -8,15 +8,15 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t num_of_elem = 0;
-	listint_t *current = (*h);
+	listint_t *current = *h;
 
 	if (h)
 	{
-	for (; (*h); num_of_elem++)
+	for (; current; num_of_elem++)
 	{
 		current = current->next;
 		free(*h);
-		(*h) = current;
+		*h = current;
 	}
 	}
 	return (num_of_elem);
