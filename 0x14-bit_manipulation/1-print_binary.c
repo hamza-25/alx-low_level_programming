@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('0');
 		}
-		else if (size & 1L << --size)
+		else if (n & 1L << --size)
 		{
 			_putchar('1');
 			tap++;
