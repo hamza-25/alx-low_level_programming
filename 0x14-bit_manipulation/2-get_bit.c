@@ -1,27 +1,19 @@
 #include "main.h"
 
 /**
- * get_bit - convert decimal to binary
- * @n: num tobe converted
- * @index: to bet returned
- * Return: index or -1
+ * get_bit - print bits from index given 
+ * @n: number to be converted to binary 
+ * @index: index for exist bits 
+ * Return: int or -1 if fail
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i = 0, j;
-	int binary[32];
+	int index_bit;
 
-	if (!n)
-		return (-1);
-	for (; n >= 0;)
+	if (8 * sizeof(n) <= index)
 	{
-		binary[i++] = n % 2;
-		if (n == 0)
-			break;
-		n /= 2;
+		retrn(-1);
 	}
-	for (j = i - 1; j >= 0; j--)
-		if (j == index)
-			return binary[j];
-
+	index_bit = (n >> index) & 1;
+	return (index_bit);
 }
