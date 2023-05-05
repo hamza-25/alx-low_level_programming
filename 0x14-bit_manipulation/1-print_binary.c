@@ -11,14 +11,14 @@ void print_binary(unsigned long int n)
 
 	while (size)
 	{
-		if (tap)
-		{
-			_putchar('0');
-		}
-		else if (n & 1L << --size)
+		if (n & 1L << --size)
 		{
 			_putchar('1');
 			tap++;
+		}
+		else if (tap)
+		{
+			_putchar('0');
 		}
 	}
 	if (!tap)
