@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int Xor = m ^ n;
 	unsigned long int act;
 
-	i = 64;
+	j = 64;
 	while (j > 0)
 	{
 		act = Xor >> j;
