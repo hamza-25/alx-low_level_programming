@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * get_bit - print bits from index given 
- * @n: number to be converted to binary 
- * @index: index for exist bits 
+ * get_bit - print bits from index given
+ * @n: number to be converted to binary
+ * @index: index for exist bits
  * Return: int or -1 if fail
 */
 int get_bit(unsigned long int n, unsigned int index)
