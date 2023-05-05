@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * clear_bitt - set bits from index given
+ * clear_bit - set bits from index given
  * @n: number to be converted to binary
  * @index: index for exist bits
  * Return: 1 or -1 if fail
