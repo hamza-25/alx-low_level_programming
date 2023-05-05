@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 	int tap = 0;
 	int size = 8 * sizeof(n);
 
-	for (; size;)
+	while (size)
 	{
 		if (tap)
 		{
