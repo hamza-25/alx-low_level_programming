@@ -11,8 +11,7 @@ void print_binary(unsigned long int n)
 
 	for (; size;)
 	{
-		size--;
-		if (1L << size && n)
+		if (1L << --size && n)
 		{
 			_putchar('1');
 			tap++;
