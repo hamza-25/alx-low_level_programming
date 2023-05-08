@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
 
 /**
  * create_file -  create a file and add content
@@ -19,7 +22,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content)
 	{
-		wr = fprintf(fp, "%s", text_content);
+		wr = fwrite(text_content, sizeof(char), strlen(text_content), fp);
 		if (wr == -1)
 			return (-1);
 	}
