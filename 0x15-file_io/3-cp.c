@@ -13,17 +13,14 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int fp;
 	char *buffer;
-	int wr;
 
 	if (filename == NULL)
 		return (-1);
-	fp = open(filename, O_WRONLY | O_APPEND);
+	fp = open(filename, O_APPEND);
 	if (fp == -1)
 		return (-1);
 	buffer = malloc(sizeof(char) * strlen(text_content));
-	wr = write(fp, buffer, strlen(text_content));
-	if (wr == -1)
-		return (-1);
+	write(fp, buffer, strlen(text_content));
 	free(buffer);
 	close(fp);
 	return (1);
