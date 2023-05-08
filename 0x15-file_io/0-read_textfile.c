@@ -14,13 +14,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t wr;
 	char *buffer;
 
-
+	if (!filename)
+		return(0);
 	fp = fopen(filename, "r");
 	buffer = malloc(sizeof(char) * letters);
 	if (!buffer | !fp)
 		return(0);
 	fread(&buffer, sizeof(char),letters, fp);
 	wr = fwrite(&buffer, sizeof(char), letters, fp);
+	if (!wr)
+		return (0);
 	free(buffer);
 	fclose(fp);
 	return (wr);
