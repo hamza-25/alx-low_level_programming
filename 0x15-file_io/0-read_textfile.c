@@ -12,7 +12,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fp;
-	ssize_t wr;
+	ssize_t wr, rd;
 	char *buffer;
 
 	if (!filename)
@@ -23,8 +23,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters);
 	if (!buffer)
 		return (0);
-	fread(buffer, sizeof(char), letters, fp);
-	wr = fwrite(buffer, sizeof(char), letters, fp);
+	rd = fread(buffer, sizeof(char), letters, fp);
+	wr = fwrite(buffer, sizeof(char), letters, rd);
 	fclose(fp);
 	free(buffer);
 	return (wr);
