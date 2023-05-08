@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h>
 
 /**
  * read_textfile -  reads a text file and prints it to the POSIX
@@ -9,14 +10,18 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	if (!filename)
-		return(0);
 	FILE *fp;
-	char str[];
+	ssize_t wr;
+	char *buffer;
+
 
 	fp = fopen(filename, "r");
-	fread(&str, sizeof(char), letters,fp);
-	printf("%s\n", str);
-	fclose(filename);
-	returtn letters;
+	buffer = malloc(sizeof(char) * letters);
+	if (!buffer | !fp)
+		return(0);
+	fread(&buffer, sizeof(char),letters, fp);
+	wr = fwrite(&buffer, sizeof(char), letters, fp);
+	free(buffer);
+	fclose(fp);
+	return (wr);
 }
