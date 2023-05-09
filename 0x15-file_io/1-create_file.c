@@ -27,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 			text_content++;
 			i++;
 		}
-		wr = fwrite(text_content, sizeof(char), i, fp);
+		wr = fwrite(text_content, sizeof(text_content), i, fp);
 		if (wr == -1)
 			return (-1);
 	}
