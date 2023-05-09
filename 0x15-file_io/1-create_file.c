@@ -22,8 +22,8 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content)
 	{
-		for (int i = 0; text_content[i]; i++)
-			;
+		for (int i = 0; *text_content; i++)
+			text_content++;
 		wr = fwrite(text_content, sizeof(char), i, fp);
 		if (wr == -1)
 			return (-1);
