@@ -30,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 		wr = write(fp, text_content, ln);
 	}
 	close(fp);
-	if(wr == ls)
+	if(wr == ln)
 		return (1);
 	return (-1);
 }
