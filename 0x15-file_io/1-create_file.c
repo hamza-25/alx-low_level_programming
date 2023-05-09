@@ -13,7 +13,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	FILE *fp;
-	int wr;
+	int wr, i;
 
 	if (filename == NULL)
 		return (-1);
@@ -22,7 +22,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content)
 	{
-		for (int i = 0; *text_content;)
+		for (i = 0; *text_content;)
 		{
 			text_content++;
 			i++;
