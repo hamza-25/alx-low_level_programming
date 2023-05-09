@@ -11,18 +11,18 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
+	int fp;
 	ssize_t wr;
 	int bytes;
 	char *buffer = NULL;
 
 	if (!filename | !letters)
 		return (0);
-	fp = fopen(filename, "r");
-	if (!fp)
+	fp = open(filename, O_RDONLY);
+	if (fp == -1)
 		return (0);
-	bytes = fread(buffer, sizeof(char), letters, fp);
-	wr = fwrite(buffer, sizeof(char), bytes, fp);
-	fclose(fp);
+	bytes = read(fp, buffer, letters);
+	wr = write(STDOUT_FILENO, buffer, bytes);
+	close(fp);
 	return (wr);
 }
