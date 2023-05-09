@@ -1,4 +1,3 @@
-#include <string.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include "main.h"
@@ -15,8 +14,12 @@ int create_file(const char *filename, char *text_content)
 	int fp;
 	ssize_t wr = 0;
 	ssize_t ln;
-
-	ln = strlen(text_content);
+	
+	for (ln = 0; *text_content;)
+	{
+		text_content++;
+		ln++;
+	}
 	if (filename == NULL)
 		return (-1);
 	fp = open(filename, O_WRONLY | O_CREAT | O_TRUNC);
