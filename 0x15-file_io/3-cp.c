@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include "main.h"
+#define ERR_READ "Error: Can't read from file %s\n"
 /**
  * main -  program to copy file
  * @argc: number of args
@@ -24,14 +25,14 @@ int main(int argc, char **argv)
 	from = open(argv[1], O_RDONLY);
 	if (from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
+		dprintf(STDERR_FILENO, ERR_READ, argv[1]), exit(98);
 	}
 	for (; (bytes = read(from, buffer, 1024)) > 0;)
 		if (write(to, buffer, bytes) != bytes)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	if (bytes == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
+		dprintf(STDERR_FILENO, ERR_READ, argv[1]), exit(98);
 	}
 	to = close(to);
 	from = close(from);
