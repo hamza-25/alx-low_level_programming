@@ -17,41 +17,21 @@ int main(int argc, char **argv)
 	char buffer[1024];
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	to = open(argv[2], O_WRONLY, O_CREAT | O_TRUNC, 0664);
 	if (to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %s\n", argv[2]);
-		exit(99);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %s\n", argv[2]), exit(99);
 	from = open(argv[1], O_RDONLY);
 	if (from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE %s\n", argv[1]);
-		exit(98);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE %s\n", argv[1]), exit(98);
 	for (; (bytes = read(from, buffer, 1024)) > 0;)
-	{
 		if (write(to, buffer, bytes) != bytes)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %s\n", argv[2]);
-			exit(99);
-		}
-	}
+			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %s\n", argv[2]), exit(99);
 	if (bytes == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE %s\n", argv[1]);
-		exit(98);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE %s\n", argv[1]), exit(98);
 	to = close(to);
 	from = close(from);
 	if (from || to)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", from);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", from), exit(100);
 	return (EXIT_SUCCESS);
 }
