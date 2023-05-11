@@ -24,12 +24,15 @@ int create_file(const char *filename, char *text_content)
 		text_content++;
 		ln++;
 	}
-	fp = fopen(filename, "w");
+	fp = fopen(filename, "w+");
 	if (!fp)
 		return (-1);
-	wr = fwrite(text_content, sizeof(char), ln, fp);
-	if (wr == -1)
-		return (-1);
+	if (text_content)
+	{
+		wr = fwrite(text_content, sizeof(char), ln, fp);
+		if (wr == -1)
+			return (-1);
+	}
 	fclose(fp);
 	return (1);
 }
