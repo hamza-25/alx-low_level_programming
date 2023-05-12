@@ -34,11 +34,9 @@ int main(int argc, char **argv)
 	{
 		dprintf(STDERR_FILENO, ERR_READ, argv[1]), exit(98);
 	}
-	to = close(to);
 	from = close(from);
-	if (to)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from), exit(100);
-	if (from)
+	to = close(to);
+	if (to || from)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from), exit(100);
 	return (EXIT_SUCCESS);
 }
