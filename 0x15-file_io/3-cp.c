@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 {
 	int to = 0;
 	int from = 0;
-	signed long int bytes;
+	ssize_t bytes;
 	char buffer[1024];
 
 	if (argc != 3)
