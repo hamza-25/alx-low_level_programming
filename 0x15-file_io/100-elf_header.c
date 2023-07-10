@@ -6,6 +6,25 @@
 #include "main.h"
 
 /**
+ * magic - print bytes magic
+ * @l: header struct
+*/
+void magic(Elf64_Ehdr l)
+{
+	int j;
+
+	printf("  Magic:   ");
+	for (j = 0; j < EI_NIDENT; j++)
+	{
+		printf("%2.2x", l.e_ident[i]);
+		if (i == EI_NIDENT - 1)
+			printf("\n");
+		else
+			printf(" ");
+	}
+}
+
+/**
  * main -  program elf file
  * @argc: number of args
  * @argv: array of string
@@ -32,5 +51,6 @@ int main(int argc, char **argv)
 	}
 	else
 		dprintf(STDERR_FILENO, "Error elf file: %s\n", argv[1]), exit(98);
+	magic(l);
 	return (0);
 }
