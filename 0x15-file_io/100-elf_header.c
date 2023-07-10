@@ -22,13 +22,14 @@ int main(int argc, char **argv)
 	f_d = open(argv[1], O_RDONLY);
 	if (f_d == -1)
 		dprintf(STDERR_FILENO, "file can't open: %s\n", argv[1]), exit(98);
-	if ((bytes = read(f_d, &l, sizeof(l))) < 1 || bytes != sizeof(l))
+	bytes = read(f_d, &l, sizeof(l))
+	if (bytes < 1 || bytes != sizeof(l))
 		dprintf(STDERR_FILENO, "can't read: %s\n", argv[1]), exit(98);
 	if (l.e_ident[1] == 'E' && l.e_ident[0] == 0x7f && l.e_ident[2] == 'L' &&
 			l.e_ident[3] == 'F')
 	{
 		printf("ELF Header:\n");
 	}
-	else	
+	else
 		dprintf(STDERR_FILENO, "Error elf file: %s\n", argv[1]), exit(98);
 }
