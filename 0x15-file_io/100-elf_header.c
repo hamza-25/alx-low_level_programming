@@ -32,6 +32,5 @@ int main(int argc, char **argv)
 	}
 	else
 		dprintf(STDERR_FILENO, "Error elf file: %s\n", argv[1]), exit(98);
-	magic(l);
 	return (0);
 }
