@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include "main.h"
 #define ERR_READ "Error: Can't read from file %s\n"
+
 /**
  * main -  program to copy file
  * @argc: number of args
@@ -24,7 +25,7 @@ int main(int argc, char **argv)
 	{
 		dprintf(STDERR_FILENO, ERR_READ, argv[1]), exit(98);
 	}
-	to = open(argv[2], O_WRONLY, O_CREAT | O_TRUNC, 0664);
+	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	for (; (bytes = read(from, buffer, 1024)) > 0;)
@@ -36,7 +37,7 @@ int main(int argc, char **argv)
 	}
 	from = close(from);
 	to = close(to);
-	if (to || from)
+	if (to < 0 || from < 0)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from), exit(100);
 	return (EXIT_SUCCESS);
 }
