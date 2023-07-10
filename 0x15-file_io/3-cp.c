@@ -29,8 +29,10 @@ int main(int argc, char **argv)
 	if (to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	for (; (bytes = read(from, buffer, 1024)) > 0;)
+	{
 		if (write(to, buffer, bytes) != bytes)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	}
 	if (bytes == -1)
 	{
 		dprintf(STDERR_FILENO, ERR_READ, argv[1]), exit(98);
