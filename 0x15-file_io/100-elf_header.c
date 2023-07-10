@@ -9,7 +9,7 @@
  * magic - print bytes magic
  * @l: header struct
 */
-void magic(Elf64_Ehdr l)
+void magic(Elf32_Ehdr l)
 {
 	int j;
 
@@ -33,7 +33,7 @@ void magic(Elf64_Ehdr l)
 int main(int argc, char **argv)
 {
 	int f_d;
-	Elf64_Ehdr l;
+	Elf32_Ehdr l;
 	ssize_t bytes;
 
 	if (argc != 2)
