@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	Elf64_Ehdr l;
 	ssize_t bytes;
 
-	if (ac != 2)
+	if (argc != 2)
 		dprintf(STDERR_FILENO, "elf header file error\n"), exit(98);
 	f_d = open(argv[1], O_RDONLY);
 	if (f_d == -1)
