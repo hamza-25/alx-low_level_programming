@@ -14,6 +14,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node;
 	unsigned long int index;
 
+	if(!ht || !key || || !value)
+		return (0);
 	new_node = malloc(sizeof(hash_node_t));
 	if (!new_node)
 		return (0);
@@ -33,15 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(new_node->key, key);
 	strcpy(new_node->value, value);
 	index = hash_djb2((const unsigned char *)key);
-	if (current->array[index] == NULL)
-	{
-		new_node->next = NULL;
-		current->array[index] = new_node;
-	}
-	else
-	{
-		new_node->next = current->array[index];
-		current->array[index] = new_node;
-	}
+	new_node->next = current->array[index];
+	current->array[index] = new_node;
 	return (1);
 }
