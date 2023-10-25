@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Define island module
 """
+
+
 def island_perimeter(grid):
     """Representation of primeter island function
     """
