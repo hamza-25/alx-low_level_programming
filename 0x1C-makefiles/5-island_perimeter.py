@@ -1,4 +1,9 @@
-def perimeter1(grid):
+#!/usr/bin/python3
+"""Define island module
+"""
+def island_perimeter(grid):
+    """Representation of primeter island function
+    """
     pri = 0
     for p_id, list in enumerate(grid):
         index = 0
