@@ -10,23 +10,37 @@
 
 int jump_search(int *array, size_t size, int value)
 {
-    size_t l, h, i, step, idx;
+	size_t l, h, i, step, idx, j;
 
-    idx = size - 1;
-    step = sqrt(size);
-    l = 0;
-    h = l + step;
-    for (i = h; i <= idx; i *= step)
-    {
-        if (array[h] >= value)
-        {
-
-        }
-        else
-        {
-            
-        }
-    }
-    
+	if (array == NULL || size == 0)
+		return (-1);
+	idx = size - 1;
+	step = sqrt(size);
+	l = 0;
+	h = l + step;
+	for (i = h; i <= idx; i += step)
+	{
+		if (array[i] == value)
+		{
+			return (i);
+		}
+		else if (array[i] > value)
+		{
+			for (j = l; j < i; j++)
+			{
+				if (array[j] == value)
+					return (j);
+			}
+		}
+		else
+		{
+			l = i;
+		}
+	}
+	for (j = l; j <= idx; j++)
+	{
+		if (array[j] == value)
+			return (j);
+	}
 	return (-1);
 }
