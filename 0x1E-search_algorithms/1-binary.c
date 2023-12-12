@@ -25,9 +25,7 @@ int binary_search(int *array, size_t size, int value)
 		{
 			printf("%d", array[i]);
 			if ((i + 1) <= h)
-			{
 				printf(", ");
-			}
 			i++;
 		}
 		printf("\n");
@@ -36,13 +34,9 @@ int binary_search(int *array, size_t size, int value)
 		if (array[halt] == value)
 			return (halt);
 		else if (array[halt] > value)
-		{
 			h = halt - 1;
-		}
 		else
-		{
 			l = halt + 1;
-		}
 		t_size /= 2;
 	}
 	return (-1);
