@@ -10,13 +10,12 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t l, h, halt, i, t_size;
+	size_t l, h, halt, i;
 
 	if (!array || size == 0)
 		return (-1);
 	h = size - 1;
 	l = 0;
-	t_size = size;
 	while (l <= h)
 	{
 		i = l;
@@ -37,7 +36,6 @@ int binary_search(int *array, size_t size, int value)
 			h = halt - 1;
 		else
 			l = halt + 1;
-		t_size /= 2;
 	}
 	return (-1);
 }
